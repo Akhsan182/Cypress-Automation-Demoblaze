@@ -1,0 +1,20 @@
+{
+    "valid_signup_user": "akhsanul",
+    "valid_signup_pass": "maulana123",
+
+    "valid_user": "akhsanul",
+    "valid_pass": "maulana123",
+    "invalid_user": "salahuser",
+    "invalid_pass": "salahpass",
+
+    "nameorder" : "akhsan",
+    "country" : "Indonesia",
+    "city" : "Tegal",
+    "card": "089788",
+    "month": "July",
+    "year": "2023",
+
+    "inputReceiptEmail": "akhsan@getimel.com",
+    "inputReceiptName": "Akhsan",
+    "inputMessage": "Complaint Samsung GalaxyS7"
+}
