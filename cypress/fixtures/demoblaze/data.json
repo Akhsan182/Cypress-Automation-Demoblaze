@@ -7,14 +7,17 @@
     "invalid_user": "salahuser",
     "invalid_pass": "salahpass",
 
-    "nameorder" : "akhsan",
-    "country" : "Indonesia",
-    "city" : "Tegal",
-    "card": "089788",
-    "month": "July",
-    "year": "2023",
+    "name_field" : "akhsan",
+    "country_field" : "Indonesia",
+    "city_field" : "Tegal",
+    "card_field": "089788",
+    "month_field": "July",
+    "year_field": "2023",
 
-    "inputReceiptEmail": "akhsan@getimel.com",
-    "inputReceiptName": "Akhsan",
-    "inputMessage": "Complaint Samsung GalaxyS7"
+    "contact_email": "akhsan@getimel.com",
+    "invalid_contact_email": "akhsangetimel",
+    "contact_name": "akhsan",
+    "short_message": "Can I pick it up directly at the offline store?",
+    "long_message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet augue quis mi pharetra, sed sollicitudin nulla vehicula. Suspendisse sodales tortor nulla, rutrum blandit tortor aliquam in. Curabitur ultricies non tortor at blandit. Curabitur vitae felis congue, fringilla diam vel, mollis enim. Aliquam a iaculis ligula, ac pharetra nisi. Integer blandit nisl id ex convallis, ut blandit risus porta. Praesent pellentesque, odio non vestibulum eleifend, dui tellus pharetra eros, vel fermentum sem tortor et nulla. Phasellus lobortis efficitur felis a fringilla. In rhoncus mi ac massa aliquet, eget lobortis sem sollicitudin. Suspendisse erat quam, varius in turpis et, porta accumsan massa. Quisque dictum mi velit, ac cursus augue malesuada ut. Vestibulum quis ex a mi eleifend sollicitudin. Sed pharetra interdum elit, in placerat sem feugiat ut. Integer faucibus vitae mauris sit amet vestibulum. Mauris aliquet dui non tellus lacinia, in consequat magna elementum. Curabitur mollis suscipit massa non semper. Donec et augue non augue dictum euismod. Donec mollis nunc nisi, vel sodales nisi convallis ac. Duis auctor lorem nec vestibulum pretium. Nulla sed orci tempor, sodales ante et, eleifend lacus. Vestibulum neque quam, scelerisque nec augue eu, tristique aliquam nulla. Donec odio ex, lacinia nec mollis at, placerat nec mi. Duis a ipsum ut dolor feugiat mollis. Nullam vitae nunc lacus. In ultrices tellus risus, vel pellentesque eros congue vitae. Morbi vitae tincidunt turpis, vel venenatis quam. Cras enim ex, hendrerit eget ullamcorper in, pretium ornare augue. Mauris pretium condimentum lectus, et sagittis mi facilisis et. Nam consequat porttitor tortor in sagittis. Praesent sed efficitur elit. Praesent fermentum lobortis tristique. Proin sit amet nunc metus. Fusce eu urna augue. Donec in porttitor sapien. Mauris tincidunt arcu nec lacinia suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer molestie tortor vel vulputate ullamcorper. Aenean ultricies neque lacus, nec lacinia justo tincidunt eu. Nunc a quam id orci imperdiet euismod. Fusce egestas in nunc in ullamcorper. Sed a convallis purus. Praesent vel porta lectus. Vivamus vel eleifend libero. In hac habitasse platea dictumst. Curabitur tortor mi, laoreet eu vestibulum et, mollis in dolor. In sed metus risus. Duis laoreet mollis nisl, ut mollis sapien malesuada sit amet. Morbi tempus eleifend risus, et sagittis nulla luctus ac. Nunc convallis viverra arcu, eget ullamcorper enim. Donec aliquet turpis sit amet molestie tristique. Pellentesque et viverra justo. Phasellus commodo quam lacus, eget scelerisque quam scelerisque a. Aenean iaculis diam lacus, at aliquet velit tincidunt nec. In hac habitasse platea dictumst. Curabitur consequat nec dolor congue mattis."
+    
 }

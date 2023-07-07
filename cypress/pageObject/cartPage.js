@@ -1,37 +1,21 @@
 class cartPage{
-    loginBtn1 = '#login2'
-    username = '#loginusername'
-    password = '#loginpassword'
-    loginBtn2 = '#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary'
-    alert = '#nameofuser'
     item1 = ':nth-child(1) > .card > .card-block > .card-title > .hrefch'
     cartBtn = '.col-sm-12 > .btn'
     cartMenu = '#cartur'
-    deleteBtn = '.success > :nth-child(4) > a'
+    deleteBtn = '#tbodyid > :nth-child(1) > :nth-child(4) > a'
 
-    clickLogin1(){
-        cy.get(this.loginBtn1).click()
-    }
-    
-    inputUsername(user){
-        cy.get(this.username, {delay: 0}).type(user) 
-    }
+    //Place Order Button
+    PO_Btn = '.col-lg-1 > .btn'
+    NameField = '#name'
+    CountryField = '#country'
+    CityField = '#city'
+    CardField = '#card'
+    MonthField = '#month'
+    YearField = '#year'
+    PurchaseButton = '#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary'
 
-    wait(){
-        cy.wait(100)
-    }
-    
-    inputPassword(passw){
-        cy.get(this.password, {delay: 0}).type(passw)
-    }
-
-    clickLogin2(){
-        cy.get(this.loginBtn2).click()
-    }
-
-    validate(){
-        cy.get(this.alert).should('be.visible')
-    }
+    //Validasi Success Purchase
+    ValidateSuccess = '.sweet-alert > h2'
 
     additem1(){
         cy.get(this.item1).click()
@@ -41,16 +25,90 @@ class cartPage{
         cy.get(this.cartBtn).click()
     }
 
+    validate_product_added() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Product added.')
+        })  
+    }
+
     cart_Menu(){
         cy.get(this.cartMenu).click()
     }
 
-    url(){
-        cy.url().should('eq','https://demoblaze.com/cart.html')
-    }
-
     clickDelete(){
         cy.get(this.deleteBtn).click()
+    }
+
+    clickPOButton(){
+        cy.get(this.PO_Btn).click()
+    }
+
+    InputNameField(name_order){
+        cy.get(this.NameField).type(name_order)
+    }
+
+    InputCountryField(country_field){
+        cy.get(this.CountryField).type(country_field)
+    }
+
+    InputCityField(city_field){
+        cy.get(this.CityField).type(city_field)
+    }
+
+    InputCardField(card_field){
+        cy.get(this.CardField).type(card_field)
+    }
+
+    InputMonthField(month_field){
+        cy.get(this.MonthField).type(month_field)
+    }
+
+    InputYearField(year_field){
+        cy.get(this.YearField).type(year_field)
+    }
+
+    ClickPurchaseButton(){
+        cy.get(this.PurchaseButton).click()
+    }
+
+    validate_success(){
+        cy.get('.sweet-alert > h2').should('have.text', 'Thank you for your purchase!')
+    }
+
+    validate_empty_name() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Please fill out Name and Creditcard.')
+        })  
+    }
+
+    validate_empty_country() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Please fill out Name and Creditcard.')
+        })  
+    }
+
+    validate_empty_city() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Please fill out Name and Creditcard.')
+        })  
+    }
+
+    validate_empty_card() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Please fill out Name and Creditcard.')
+        })  
+    }
+
+    validate_empty_month() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Please fill out Name and Creditcard.')
+        })  
+    }
+
+    validate_empty_year() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Please fill out Name and Creditcard.')
+        })  
     }
 }
 

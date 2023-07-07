@@ -10,15 +10,15 @@ class loginPage{
     }
     
     inputUsername(user){
-        cy.get(this.username, {delay: 0}).type(user) 
+        cy.get(this.username, {force: true, delay: 700}).type(user) 
     }
 
     wait(){
-        cy.wait(200)
+        cy.wait(500)
     }
     
     inputPassword(passw){
-        cy.get(this.password, {delay: 0}).type(passw)
+        cy.get(this.password, {force: true, delay: 700}).type(passw)
     }
 
     clickLogin2(){

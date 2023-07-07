@@ -1,58 +1,65 @@
 class contactPage{
-    loginBtn1 = '#login2'
-    username = '#loginusername'
-    password = '#loginpassword'
-    loginBtn2 = '#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary'
-    alert = '#nameofuser'
     contactBtn = ':nth-child(2) > .nav-link'
 
-    receiptEmail = '#recipient-email'
-    receiptName = '#recipient-name'
-    msgg = '#message-text'
+    ContactEmail = '#recipient-email'
+    ContactName = '#recipient-name'
+    ContactMessage = '#message-text'
     sendBtn = '#exampleModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary'
-
-    clickLogin1(){
-        cy.get(this.loginBtn1).click()
-    }
-    
-    inputUsername(user){
-        cy.get(this.username, {delay: 0}).type(user) 
-    }
-
-    wait(){
-        cy.wait(100)
-    }
-    
-    inputPassword(passw){
-        cy.get(this.password, {delay: 0}).type(passw)
-    }
-
-    clickLogin2(){
-        cy.get(this.loginBtn2).click()
-    }
-
-    validate(){
-        cy.get(this.alert).should('be.visible')
-    }
 
     clickContactButton(){
         cy.get(this.contactBtn).click()
     }
 
-    addReceiptEmail(inputReceiptEmail){
-        cy.get(this.receiptEmail, {delay: 0}).type(inputReceiptEmail)
+    InputContactEmail(contact_email){
+        cy.get(this.ContactEmail, {delay: 0}).type(contact_email)
     }
 
-    addReceiptName(inputReceiptName){
-        cy.get(this.receiptName, {delay: 0}).type(inputReceiptName)
+    InputContactName(contact_name){
+        cy.get(this.ContactName, {delay: 0}).type(contact_name)
     }
 
-    addMessage(inputMessage){
-        cy.get(this.msgg, {delay: 0}).type(inputMessage)
+    InputContactMessage(contact_message){
+        cy.get(this.ContactMessage, {delay: 0}).type(contact_message)
     }
 
     SendButton(){
         cy.get(this.sendBtn).click()
+    }
+
+    validate_success_contact() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Thanks for the message!!')
+        })  
+    }
+
+    validate_invalid_email() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Please input valid email.')
+        })  
+    }
+
+    validate_empty_all_field() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Field cannot be empty. Please fill in with a valid data.')
+        })  
+    }
+
+    validate_empty_email() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Contact email field cannot be empty.')
+        })  
+    }
+
+    validate_empty_name() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Contact name field cannot be empty.')
+        })  
+    }
+
+    validate_empty_message() {
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Message cannot be empty.')
+        })  
     }
 }
 
